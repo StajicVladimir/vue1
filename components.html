@@ -1,0 +1,21 @@
+<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"> </script>
+
+<div id="app">
+  <my-cmp></my-cmp>
+  <hr>
+  <my-cmp></my-cmp>
+</div>
+
+<script>
+Vue.component('my-cmp', {
+  data: function() {
+    return {
+      status: 'Critical'
+    }
+  },
+  template: '<p>Server Status: {{ status }}</p>'
+});
+  new Vue({
+    el: '#app'
+  })
+</script>
